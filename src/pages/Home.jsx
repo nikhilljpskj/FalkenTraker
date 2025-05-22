@@ -24,7 +24,8 @@ function Home() {
             <div className="card-body">
               <h5 className="card-title">Reports</h5>
               <p className="card-text">View various reports (Coming soon).</p>
-              <a href="#" className="btn btn-secondary disabled">Coming Soon</a>
+              <Link to="/coming-soon" className="btn btn-secondary">Coming Soon</Link>
+
             </div>
           </div>
         </div>
@@ -35,7 +36,8 @@ function Home() {
             <div className="card-body">
               <h5 className="card-title">Settings</h5>
               <p className="card-text">Configure application settings (Coming soon).</p>
-              <a href="#" className="btn btn-secondary disabled">Coming Soon</a>
+              <Link to="/coming-soon" className="btn btn-secondary">Coming Soon</Link>
+
             </div>
           </div>
         </div>

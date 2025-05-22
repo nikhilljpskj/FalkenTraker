@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import StudentForm from './pages/StudentForm';
 import Footer from './components/Footer';
+import ProjectTracker from './pages/ProjectTracker';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* Route for student form page */}
         <Route path="/student-form" element={<StudentForm />} />
+        <Route path="/project-form" element={<ProjectTracker />} />
       </Routes>
       <Footer />
     </BrowserRouter>

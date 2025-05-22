@@ -1,9 +1,7 @@
-// src/components/Header.js
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function Header() {
-  // Optional: close mobile menu on link click (for better UX)
   useEffect(() => {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     const navbarCollapse = document.getElementById('navbarNav');
@@ -17,26 +15,33 @@ function Header() {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-md navbar-light bg-light">
-      <div className="container-fluid">
-        {/* Brand name */}
-        <Link className="navbar-brand" to="/">Tracker</Link>
-        {/* Toggler button for mobile */}
-        <button className="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark shadow" style={{ minHeight: '70px' }}>
+      <div className="container">
+        <Link className="navbar-brand fw-bold text-white" to="/">Tracker</Link>
+
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
-        {/* Collapsible menu links */}
+
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ms-auto align-items-center">
             <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+              <Link className="nav-link text-white" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/student-form">Student Form</Link>
+              <Link className="nav-link text-white" to="/student-form">Student Form</Link>
             </li>
-            {/* Additional nav links can go here */}
+            <li className="nav-item">
+              <Link className="nav-link text-white" to="/project-form">Project Form</Link>
+            </li>
           </ul>
         </div>
       </div>
